@@ -54,6 +54,7 @@ class SeatCategoryResource extends Resource
                             ->numeric()
                             ->prefix('Rp')
                             ->default(100000)
+                            ->hidden()
                             ->required(),
                     ])->columns(2),
             ]);
@@ -80,7 +81,8 @@ class SeatCategoryResource extends Resource
                 Tables\Columns\TextColumn::make('price')
                     ->label('Harga Tetap')
                     ->money('IDR', locale: 'id')
-                    ->sortable(),
+                    ->sortable()
+                    ->hidden(),
 
                 Tables\Columns\TextColumn::make('seat_masters_count')
                     ->label('Jumlah Kursi')

@@ -97,6 +97,7 @@ class OrderResource extends Resource
                             ->prefix('Rp')
                             ->default(0)
                             ->visible(fn (string $operation) => $operation === 'edit')
+                            ->hidden()
                             ->required()
                             ->disabled(fn (?Order $record) => $record !== null),
 
@@ -136,9 +137,8 @@ class OrderResource extends Resource
                                     ->get()
                                     ->mapWithKeys(function($seat) {
                                         $catName = $seat->seatMaster?->seatCategory?->name ?? 'Unknown';
-                                        $price = number_format($seat->seatMaster?->seatCategory?->price ?? 0, 0, ',', '.');
                                         $code = $seat->seatMaster?->seat_code ?? '-';
-                                        return [$seat->id => "{$code} - {$catName} (Rp {$price})"];
+                                        return [$seat->id => "{$code} - {$catName}"];
                                     });
                             })
                             ->visible(fn (string $operation, ?Order $record) => $operation === 'create' || ($operation === 'edit' && in_array($record?->status, ['pending_payment', 'waiting_verification'])))

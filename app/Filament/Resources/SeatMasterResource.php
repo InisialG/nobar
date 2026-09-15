@@ -96,7 +96,8 @@ class SeatMasterResource extends Resource
                 Tables\Columns\TextColumn::make('seatCategory.price')
                     ->label('Harga Tetap')
                     ->money('IDR', locale: 'id')
-                    ->placeholder('-'),
+                    ->placeholder('-')
+                    ->hidden(),
 
                 Tables\Columns\TextColumn::make('row_num')
                     ->label('Baris #')
