@@ -277,13 +277,19 @@
                             <span>Tentang Acara</span>
                         </div>
 
-                        <blockquote class="text-base sm:text-lg text-slate-800 font-serif italic leading-relaxed mb-4 border-l-4 border-[#ffb200] pl-4 py-1">
-                            "Celebrating a cherished tradition and honoring the rich cultural tapestry of the Mid-Autumn Festival through music, dance, and verse."
-                        </blockquote>
+                        @if($event->description)
+                            <div class="prose prose-sm max-w-none text-slate-600">
+                                {!! $event->description !!}
+                            </div>
+                        @else
+                            <blockquote class="text-base sm:text-lg text-slate-800 font-serif italic leading-relaxed mb-4 border-l-4 border-[#ffb200] pl-4 py-1">
+                                "Celebrating a cherished tradition and honoring the rich cultural tapestry of the Mid-Autumn Festival through music, dance, and verse."
+                            </blockquote>
 
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Pentas seni pertunjukan spektakuler persembahan Vihara Borobudur yang menggabungkan harmoni tari tradisional, musik teater, dan seni vokal bernuansa budaya luhur.
-                        </p>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Pentas seni pertunjukan spektakuler persembahan Vihara Borobudur yang menggabungkan harmoni tari tradisional, musik teater, dan seni vokal bernuansa budaya luhur.
+                            </p>
+                        @endif
                     </div>
 
                     <!-- Penyelenggara Profile Card -->
