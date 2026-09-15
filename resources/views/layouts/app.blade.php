@@ -75,7 +75,7 @@
             <a href="{{ url('/') }}" class="flex items-center gap-3 group">
                 <img src="{{ asset('img/logovh.png') }}" alt="Boro Events Logo"
                     class="h-12 sm:h-16 max-h-16 w-auto object-contain group-hover:scale-105 transition-transform">
-                <img src="{{ asset('img/kbi.png') }}" alt="KBI Logo"
+                <img src="{{ asset('img/KBI.png') }}" alt="KBI Logo"
                     class="h-8 sm:h-9 max-h-9 w-auto object-contain group-hover:scale-105 transition-transform">
             </a>
 
