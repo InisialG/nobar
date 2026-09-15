@@ -23,7 +23,7 @@ class EventResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
-    protected static ?string $navigationLabel = 'Daftar Event Pentas Seni';
+    protected static ?string $navigationLabel = 'Daftar Events';
 
     public static function form(Schema $schema): Schema
     {
