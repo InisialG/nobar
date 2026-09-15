@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ? $title . ' — Boro Event' : 'Boro Event' }}</title>
+    <title>{{ isset($title) ? $title . ' — Boro Event' : 'Boro Event' }}</title>
     <link rel="shortcut icon" href="{{ asset('img/logovh.png') }}?v=3">
     <link rel="icon" type="image/png" href="{{ asset('img/logovh.png') }}?v=3">
 
